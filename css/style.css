@@ -52,27 +52,19 @@ body {
 .label {
     padding: 3px;
 }
-
-
-
-/*#quote {
-    padding: 25px 25px 0 25px;
-    line-height: 3em;
-    color: #000;
-}
-
-#author {
-    padding: 25px 25px 35px 25px;
-}*/
-
-h1 {
-    font-size: 2em;
+input{
+    background-color: #FFF;
+    border: 1px solid #1E232D;
+    padding: 10px 20px;
+    font-size: 1em;
+    width: 150px;
+    border-radius: 3px;
 }
 
 button {
     background-color: transparent;
     border: 1px solid #1E232D;
-    margin: 0 5px;
+    margin: 10px 5px;
     padding: 10px 20px;
     font-size: 1em;
     width: 150px;
