@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Jon's Random Quote Generator</title>
+	<link href="css/style.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109181346-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109181346-1');
+	</script>
+
+</head>
+  
+<body onload="">
+
+	<!-- This will wrap the whole page content -->
+	<div class="wrapper">
+
+		<!-- Main image -->
+		<div class="main-img">
+			<img src="img/if_App_2638291.svg">
+		</div>
+
+		<!-- Page Header -->
+		<header>
+			<h3>Quotes to Inspire you</h3>
+		</header>
+		
+		<!-- This is where the quote will display	 -->
+		<section id="quote">
+		</section>
+
+		<!-- This button will generate a new quote when pressed -->
+		<div id="buttons">
+			<button id="button-new-quote">
+				New Quote        
+			</button>
+
+			<a id="tweet_btn" target = "_blank">
+				<button>
+					Tweet
+				</button>
+			</a>
+
+			<!-- <button id="linkedin">
+				Share on Linkedin
+			</button> -->
+		</div>
+	</div>
+
+</body>
+
+</html>

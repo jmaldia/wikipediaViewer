@@ -1,0 +1,12 @@
+Tasks
+
+- Write the HTML to structure the page
+- Write the script to grab the search items from an array
+- Create button for search
+- When button is clicked
+	- get new search results
+	- display search results
+- Add random button 
+- Write CSS
+- Write the script to grab the quote from wikipedia API
+- Format the JSON object to display just the code
