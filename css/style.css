@@ -1,28 +1,63 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
-    background: -webkit-gradient(linear, left top, left bottom, from(#7f8c8d), to(#ecf0f1)) fixed;
-    background: -moz-gradient(linear, left top, left bottom, from(#7f8c8d), to(#ecf0f1)) fixed;
-    text-align: center;
-    color: #1E232D;
-    font-family: 'Lato', Helvetica, sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2980b9), to(#ecf0f1)) fixed;
+  background: -moz-gradient(linear, left top, left bottom, from(#2980b9), to(#ecf0f1)) fixed;
+  text-align: center;
+  color: #333F4E;
+  font-family: 'Lato', Helvetica, sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2c3e50;
 }
 
 .wrapper {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.main-img {
-    margin: 0 auto;
-    padding-top:100px;
-    padding-bottom: 15px;
-    max-width: 75px;
+header {
+  background-color: #FFF;
+  margin: 0;
+  padding: 10px;
+}
+
+/*.main-img {
+  margin: 0 auto;
+  padding-bottom: 15px;
+  max-width: 75px;
+  float: left;
 }
 
 .main-img img {
-    width: 75px;
-    max-width: 75px;
+  width: 75px;
+  max-width: 75px;
+}*/
+
+#search {
+  padding: 100px 0;
+}
+
+input{
+  background-color: #FFF;
+  border: 1px solid #1E232D;
+  padding: 10px 20px;
+  font-size: 1em;
+  width: 150px;
+  border-radius: 3px;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #1E232D;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  width: 150px;
+  border-radius: 3px;
 }
 
 .container {
@@ -39,37 +74,22 @@ body {
   margin: auto;  /* Magic! */
   background-color: #FFF;
   margin-bottom: 30px;
-}
-
-.child {
-    
+  border-radius: 3px;
 }
 
 .child img {
-    width: 100%;
+  width: 100%;
+  border-radius-top: 3px;
 }
 
 .label {
-    padding: 3px;
-}
-input{
-    background-color: #FFF;
-    border: 1px solid #1E232D;
-    padding: 10px 20px;
-    font-size: 1em;
-    width: 150px;
-    border-radius: 3px;
+  padding: 3px;
 }
 
-button {
-    background-color: transparent;
-    border: 1px solid #1E232D;
-    margin: 10px 5px;
-    padding: 10px 20px;
-    font-size: 1em;
-    width: 150px;
-    border-radius: 3px;
+footer span {
+  color: #c0392b;
 }
+
 
 @media (max-width: 480px) { 
     .main-img {
