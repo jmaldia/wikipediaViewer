@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 body {
-    background: -webkit-gradient(linear, left top, left bottom, from(#78ffd6), to(#57ade5)) fixed;
-    background: -moz-gradient(linear, left top, left bottom, from(#78ffd6), to(#57ade5)) fixed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7f8c8d), to(#ecf0f1)) fixed;
+    background: -moz-gradient(linear, left top, left bottom, from(#7f8c8d), to(#ecf0f1)) fixed;
     text-align: center;
     color: #1E232D;
     font-family: 'Lato', Helvetica, sans-serif;
@@ -25,7 +25,37 @@ body {
     max-width: 75px;
 }
 
-#quote {
+.container {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.child {
+  width: 30%;  /* Or whatever */
+  height: 300px; /* Or whatever */
+  margin: auto;  /* Magic! */
+  background-color: #FFF;
+  margin-bottom: 30px;
+}
+
+.child {
+    
+}
+
+.child img {
+    width: 100%;
+}
+
+.label {
+    padding: 3px;
+}
+
+
+
+/*#quote {
     padding: 25px 25px 0 25px;
     line-height: 3em;
     color: #000;
@@ -33,7 +63,7 @@ body {
 
 #author {
     padding: 25px 25px 35px 25px;
-}
+}*/
 
 h1 {
     font-size: 2em;

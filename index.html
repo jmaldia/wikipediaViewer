@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset=utf-8>
-	<title>Jon's Random Quote Generator</title>
+	<title>Jon's Wikipedia Viewer</title>
 	<link href="css/style.css" rel="stylesheet" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
@@ -31,28 +31,75 @@
 
 		<!-- Page Header -->
 		<header>
-			<h3>Quotes to Inspire you</h3>
+			<h3>Ten Cadence Wikipedia Viewer</h3>
 		</header>
-		
-		<!-- This is where the quote will display	 -->
-		<section id="quote">
-		</section>
 
-		<!-- This button will generate a new quote when pressed -->
+		<!-- This button will generate a search results when pressed -->
 		<div id="buttons">
-			<button id="button-new-quote">
-				New Quote        
-			</button>
+			<form action="" method="POST">
+				<input type="text" name="search" placeholder="Search">
+				<button id="btn-search">
+					Search      
+				</button>
+			</form>
 
-			<a id="tweet_btn" target = "_blank">
+
+			<a href="https://en.wikipedia.org/wiki/Special:Random" id="btn-random" target = "_blank">
 				<button>
-					Tweet
+					Random
 				</button>
 			</a>
+		</div>
 
-			<!-- <button id="linkedin">
-				Share on Linkedin
-			</button> -->
+		<!-- This is where the search results will display	 -->
+		<div class="container">
+			<div class="child">
+				<img src="http://i0.kym-cdn.com/photos/images/original/000/209/967/Mameshiba-Edamame-Wallpaper.jpg">
+				<div class="label">
+					<h4>Mameshiba</h4>
+					<p>This is the text that describes the search result</p>
+				</div>
+			</div>
+
+			<div class="child">
+				<img src="http://i0.kym-cdn.com/photos/images/original/000/209/967/Mameshiba-Edamame-Wallpaper.jpg">
+				<div class="label">
+					<h4>Mameshiba</h4>
+					<p>This is the text that describes the search result</p>
+				</div>
+			</div>
+
+			<div class="child">
+				<img src="http://i0.kym-cdn.com/photos/images/original/000/209/967/Mameshiba-Edamame-Wallpaper.jpg">
+				<div class="label">
+					<h4>Mameshiba</h4>
+					<p>This is the text that describes the search result</p>
+				</div>
+			</div>
+
+			<div class="child">
+				<img src="http://i0.kym-cdn.com/photos/images/original/000/209/967/Mameshiba-Edamame-Wallpaper.jpg">
+				<div class="label">
+					<h4>Mameshiba</h4>
+					<p>This is the text that describes the search result</p>
+				</div>
+			</div>
+
+			<div class="child">
+				<img src="http://i0.kym-cdn.com/photos/images/original/000/209/967/Mameshiba-Edamame-Wallpaper.jpg">
+				<div class="label">
+					<h4>Mameshiba</h4>
+					<p>This is the text that describes the search result</p>
+				</div>
+			</div>
+
+			<div class="child">
+				<img src="http://i0.kym-cdn.com/photos/images/original/000/209/967/Mameshiba-Edamame-Wallpaper.jpg">
+				<div class="label">
+					<h4>Mameshiba</h4>
+					<p>This is the text that describes the search result</p>
+				</div>
+			</div>
 		</div>
 	</div>
 
