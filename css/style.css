@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: -webkit-gradient(linear, left top, left bottom, from(#2980b9), to(#ecf0f1)) fixed;
   background: -moz-gradient(linear, left top, left bottom, from(#2980b9), to(#ecf0f1)) fixed;
   text-align: center;
   color: #333F4E;
   font-family: 'Lato', Helvetica, sans-serif;
-  margin: 0;
 }
 
 a {
@@ -19,12 +24,26 @@ a {
   margin: 0 auto;
 }
 
+/******************************/
+/*SEARCH*/
+/******************************/
 header {
-  background-color: #FFF;
   margin: 0;
-  padding: 10px;
+  padding: 20px 0 30px 0;
+  background-color: #FFF;
+  border-top: 3px solid #2c3e50;
+  border-bottom: 1px solid #2c3e50;
 }
 
+.logo img {
+  width: 40px;
+}
+
+header h2 {
+  margin: 20px 0 3px 0;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
 /*.main-img {
   margin: 0 auto;
   padding-bottom: 15px;
@@ -37,28 +56,54 @@ header {
   max-width: 75px;
 }*/
 
+
+/******************************/
+/*SEARCH*/
+/******************************/
+
 #search {
   padding: 100px 0;
 }
 
+.search-box {
+  padding: 8px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 input{
-  background-color: #FFF;
-  border: 1px solid #1E232D;
   padding: 10px 20px;
-  font-size: 1em;
-  width: 150px;
+  width: auto;
+  background-color: #FFF;
+  border: none;
+  font-size: 1.2em;
   border-radius: 3px;
 }
 
 button {
-  background-color: transparent;
-  border: 1px solid #1E232D;
-  margin: 10px 5px;
   padding: 10px 20px;
-  font-size: 1em;
   width: 150px;
+  background-color: #16a085;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: 200;
   border-radius: 3px;
 }
+
+#btn-random {
+  color: #ffffff;
+}
+
+
+/******************************/
+/*BODY*/
+/******************************/
 
 .container {
   display: flex; 
