@@ -1,33 +1,47 @@
 $(document).ready(function() {
+    const $container = $('.container');
+    let keyword, pageId, title, snippet;
 
-    // This gets the random quote from forismatic on load 
-    $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?").done(update).fail(handleErr);
+    // LISTENS FOR BUTTON CLICK AND GETS WIKI JSON
+    $('#btn-search').click(function(event) {
+      event.preventDefault();
+      
+      keyword = encodeURIComponent($('#keyword').val());
 
-    // This gets the random quote from forismatic on click (new quote button or tweet button)
-    $('#button-new-quote').click(function() {
-      $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?").done(update).fail(handleErr);
+      $.getJSON(`https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&list=search&utf8=1&srsearch=${keyword}&imlimit=12`).done(handleRequest).fail(handleError);
     });
 
-    // Function to update the quotes on the tweet and on the page
-    function update(response) {
-      var randomQuote = JSON.stringify(response.quoteText);
-      var randomQuoteAuthor = '';
-      
-      if (response.quoteAuthor) {
-        randomQuoteAuthor = JSON.stringify(response.quoteAuthor);
-      } else {
-        randomQuoteAuthor = "Anonymous";
+    // GRABS THE JSON OBJECT FROM WIKIPEDIA
+    function handleRequest(response) {
+      // Remove existing elements
+      $container.empty();
+      // Append all data to 
+      for (let x = 0; x < 12; x++) {
+        pageId = JSON.stringify(response.query.search[x].pageid).replace(/"/g,'');
+        title = JSON.stringify(response.query.search[x].title).replace(/"/g,'');
+        snippet = JSON.stringify(response.query.search[x].snippet).replace(/"/g,'');
+
+        $container.append(
+          `
+          <div class="card">
+            <div class="description">
+              <h4>${title}</h4>
+              <p>${snippet}</p>
+            </div>
+            <div class="link">
+              <a href="https://en.wikipedia.org/?curid=${pageId}" target="_blank">
+                click here for more info  
+              </a>
+            </div>
+          </div>
+          `
+        );
       }
-      
-      
-      // Updates the page quote
-      $('#quote').html('<section id="quote"><h1>' + randomQuote + '</section></h1><p id="author">' + randomQuoteAuthor + '</p>');
-      // Updates the twitter URL with current quote
-      $('#tweet_btn').attr('href', 'https://twitter.com/intent/tweet?text=' + randomQuote + '&via=jonmaldia&url=http%3A%2F%2Fbit.ly%2Fjonquotes&hashtags=quotes%2Cinspiration' + "%0a-" + randomQuoteAuthor);
+
     }
 
-    // Error handler
-    function handleErr(jqxhr, textStatus, err) {
+    // ERROR HANDLER
+    function handleError(jqxhr, textStatus, err) {
       console.log("Request Failed: " + textStatus + ", " + err);
     }
 });
